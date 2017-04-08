@@ -35,7 +35,7 @@ class Create extends React.Component {
   }
 
   sendForm(){
-    axios.post('http://localhost:8080/write', { title: this.state.title, img: this.state.img, description: this.state.description})
+    axios.post('http://localhost:8080/articles', { title: this.state.title, img: this.state.img, description: this.state.description})
       .then(data => {
         console.log("saved successfully");
       })

@@ -1,0 +1,38 @@
+@media only screen and (min-width:1070px){
+  .fa-bars{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width:1070px) {
+
+  .header{
+    margin-top: 68px;
+  }
+ .menu-list {
+   display: none;
+ }
+
+ .connection-buttons{
+   display: none;
+ }
+
+ .menu-list-mobile{
+   position: fixed;
+   width: 100%;
+   background-color: white;
+  }
+
+  .menu-list-mobile li{
+    height: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+  }
+  .fa-bars{
+    margin-right: 40px;
+    margin-top: 19px;
+  }
+
+}

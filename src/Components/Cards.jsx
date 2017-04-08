@@ -12,7 +12,7 @@ class Cards extends React.Component {
   }
 
   loadContent(){
-      axios.get("http://localhost:8080/write")
+      axios.get("http://localhost:8080/articles")
        .then(res => {
          this.setState({ data: res.data });
        })
@@ -24,7 +24,12 @@ class Cards extends React.Component {
   renderCards(){
     return this.state.data.map((el, i) => {
       return(
-        <Card title={el.title} key={i} img={el.img} description={el.description}/>
+        <Card
+          title={el.title}
+          id={el._id} 
+          key={i}
+          img={el.img}
+          description={el.description}/>
       )
     })
   }

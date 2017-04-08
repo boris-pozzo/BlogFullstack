@@ -28,9 +28,14 @@ app.use(function(req, res, next) {
 });
 
 //routes
-app.route('/write')
+app.route('/articles')
   .get(Article.getArticles)
-  .post(Article.postArticles)
+  .post(Article.postArticle)
+
+  app.route('/articles/:id')
+    .get(Article.getArticle)
+    .put(Article.editArticle)
+    .delete(Article.deleteArticle)
 
 
 /*const writeRoute = express.Router();
