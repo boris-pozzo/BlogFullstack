@@ -1,6 +1,7 @@
 import React from 'react';
 import Cards from './Cards';
-
+import './css/fonts.css';
+import './css/reset.css';
 
 //Components
 import Header from './Header';
@@ -17,7 +18,6 @@ class Home extends React.Component {
       </div>
     );
   }
-
 }
 
 export default Home;

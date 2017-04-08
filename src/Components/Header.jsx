@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import './css/reset.css';
 import './css/header.css';
 import './css/header-mobile.css';
+import './css/fonts.css';
 
 
 class Header extends React.Component {
@@ -14,11 +15,13 @@ class Header extends React.Component {
       width:"",
       height:"100px",
       boxShadow: "100px",
-      showComponent: false
-
+      showComponent: false,
+      margin:"0px"
     }
     this.handleScroll = this.handleScroll.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
   }
 
 
@@ -36,8 +39,22 @@ handleScroll(event) {
   }
 }
 
+onMouseLeave(e){
+  e.target.style.color= "#717171";
+}
+
+onMouseEnter(e){
+  e.target.style.color= "black";
+}
+
 toggleMenu(){
   this.setState({ showComponent : !this.state.showComponent})
+  if(this.state.showComponent){
+    this.setState({margin: "0px"})
+  }
+  else {
+    this.setState({margin: "125px"})
+  }
 }
 
 
@@ -45,19 +62,30 @@ toggleMenu(){
     const shadow = {
       boxShadow: this.state.boxShadow
     }
+
+    const textDecoration = {
+      textDecoration: "none",
+      color: "#717171",
+      cursor: "pointer"
+    }
+
+    const marginTop ={
+      marginTop: this.state.margin
+    }
+
     return (
       <div className="container">
 
         {this.state.showComponent ?
           <ul className="menu-list-mobile">
-            <li className="item"><Link to="/" > Home </Link></li>
-            <li className="item"><Link to="HomeConnected" > HomeConnected </Link></li>
-            <li className="item">Ecrire </li>
+            <li className="item"><Link style={textDecoration} to="/" > Home </Link></li>
+            <li className="item"><Link style={textDecoration} to="create" > New article </Link></li>
+            <li className="item"><Link style={textDecoration} to="about" > About </Link></li>
           </ul>:
            null
         }
 
-        <div className="header flex">
+        <div className="header flex" style={marginTop}>
 
           <div className="logo-container">
             <div className="logo">
@@ -66,15 +94,15 @@ toggleMenu(){
           </div>
 
           <ul className="menu-list flex">
-            <li className="item"><Link to="/" > Home </Link></li>
-            <li className="item"><Link to="HomeConnected" > HomeConnected </Link></li>
-            <li className="item">Ecrire </li>
+            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="/" >Home</Link></li>
+            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="create" > New article </Link></li>
+            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="about" > About </Link></li>
           </ul>
 
           <div className="connection-buttons">
-            <div>{this.props.connectOne}</div>
+            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >{this.props.connectOne}</div>
             <div>|</div>
-            <div>{this.props.connectTwo}</div>
+            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >{this.props.connectTwo}</div>
           </div>
 
           <div onClick={this.toggleMenu}>

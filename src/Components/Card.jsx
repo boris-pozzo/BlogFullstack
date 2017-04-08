@@ -13,8 +13,7 @@ class Card extends React.Component {
   }
 
   render() {
-    const { title, img, description, id } = this.props
-    console.log(id)
+    const { title, img, description} = this.props
     return (
       <div className="card" >
         <div className="header-card">
@@ -23,7 +22,9 @@ class Card extends React.Component {
         <div className="img-card">
           <img src={ img } alt=""/>
         </div>
-        <p>{ description }</p>
+        <div className="card-description">
+          <p>{ description }</p>
+        </div>
         <button onClick={this.test}>see more</button>
 
 

@@ -7,9 +7,6 @@
 
 @media only screen and (max-width:1070px) {
 
-  .header{
-    margin-top: 68px;
-  }
  .menu-list {
    display: none;
  }
@@ -25,7 +22,8 @@
   }
 
   .menu-list-mobile li{
-    height: 20px;
+    height: 40px;
+    line-height: 40px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
