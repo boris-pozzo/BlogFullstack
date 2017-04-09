@@ -28,3 +28,8 @@ Fenêtre 3
 ## Trello
 
 [https://trello.com/b/pBbNOa19/blog](https://trello.com/b/pBbNOa19/blog)
+
+## A faire
+
+- Créer les comptes utilisateurs
+- PUT page Article
