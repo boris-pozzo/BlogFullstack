@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import Jumbotron from './Jumbotron';
 import axios from 'axios';
 import './css/article.css';
 

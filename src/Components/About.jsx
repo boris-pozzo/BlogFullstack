@@ -39,7 +39,7 @@ class About extends React.Component {
               <img src="http://simplonline.co/uploads/images/Front_End/tony.tiratay/logo-simplon.png" alt=""/>
             </div>
             <div className="author">
-              Réalisé par Boris.P (Promo#6)
+              Made by Boris.P (Promo#6)
             </div>
             <ul className="list-social">
               <li onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} ><i className="fa fa-linkedin" aria-hidden="true"></i> <a style={textDecoration} href="https://www.linkedin.com/in/borispozzo/">  Linkedin</a></li>

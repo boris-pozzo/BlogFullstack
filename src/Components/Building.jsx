@@ -1,19 +1,20 @@
-
 import React from 'react';
+import './css/about.css';
 import Header from './Header';
 import OtherContent from './OtherContent';
 
-class NotFound extends React.Component {
+class About extends React.Component {
 
   render() {
+
     return (
       <div>
         <Header />
-        <OtherContent text="Error 404, Page not found" img="fa-minus-circle"/>
+        <OtherContent text="Page under construction" img="fa-exclamation-triangle"/>
       </div>
     );
   }
 
 }
 
-export default NotFound;
+export default About;

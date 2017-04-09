@@ -7,6 +7,8 @@ import Create from './Components/Create';
 import Article from './Components/Article';
 import About from './Components/About';
 import NotFound from './Components/NotFound';
+import Building from './Components/Building';
+
 
 
 const routes = (
@@ -15,6 +17,7 @@ const routes = (
         <Route path="create" component={Create}/>
         <Route path="about" component={About}></Route>
         <Route path="articles/:_id" component={Article}/>
+        <Route path="page-under-construction" component={Building}/>
         <Route path="*" component={NotFound}></Route>
       </Router>
     );

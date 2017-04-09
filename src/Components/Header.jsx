@@ -100,9 +100,9 @@ toggleMenu(){
           </ul>
 
           <div className="connection-buttons">
-            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >Log In</div>
+            <div><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="page-under-construction" > Log In </Link></div>
             <div>|</div>
-            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >Log Out</div>
+            <div><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="page-under-construction" > Log Out </Link></div>
           </div>
 
           <div onClick={this.toggleMenu}>

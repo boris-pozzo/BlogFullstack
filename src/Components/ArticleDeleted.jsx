@@ -6,7 +6,7 @@ const h2Style = {
   justifyContent: "center",
   marginTop: "30px"
 }
-const ArticleDeleted = ({}) => (
+const ArticleDeleted = () => (
   <div className="container-deleted" style={h2Style}>
     <h2>Deleted</h2>
   </div>
