@@ -8,7 +8,7 @@ const h2Style = {
 }
 const ArticleDeleted = ({}) => (
   <div className="container-deleted" style={h2Style}>
-    <h2>Article deleted</h2>
+    <h2>Deleted</h2>
   </div>
 );
 

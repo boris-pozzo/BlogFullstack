@@ -1,0 +1,46 @@
+.headerImg{
+  width: 30%;
+  height: 100px;
+  align-self: center;
+}
+
+.headerImg img{
+  height: 100%;
+  width: 100%;
+}
+
+.author{
+  width: 100%;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.list-social{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-self: center;
+
+}
+
+.list-social li{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media only screen and (max-width:900px){
+  .headerImg{
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width:600px){
+  .headerImg{
+    width: 50%;
+  }
+  .about-bloc{
+    margin-top: 80px;
+  }
+}
