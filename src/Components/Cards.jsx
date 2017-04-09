@@ -26,7 +26,7 @@ class Cards extends React.Component {
       return(
         <Card
           title={el.title}
-          id={el._id} 
+          id={el._id}
           key={i}
           img={el.img}
           description={el.description}/>

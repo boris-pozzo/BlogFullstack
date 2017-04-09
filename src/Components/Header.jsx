@@ -12,9 +12,9 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state= {
-      width:"",
+      width:"100",
       height:"100px",
-      boxShadow: "100px",
+      boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
       showComponent: false,
       margin:"0px"
     }
@@ -50,7 +50,7 @@ onMouseEnter(e){
 toggleMenu(){
   this.setState({ showComponent : !this.state.showComponent})
   if(this.state.showComponent){
-    this.setState({margin: "0px"})
+    this.setState({margin: "0"})
   }
   else {
     this.setState({margin: "125px"})
@@ -94,15 +94,15 @@ toggleMenu(){
           </div>
 
           <ul className="menu-list flex">
-            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="/" >Home</Link></li>
-            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="create" > New article </Link></li>
-            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="about" > About </Link></li>
+            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="/" >HOME</Link></li>
+            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="create" > NEW ARTICLE </Link></li>
+            <li className="item"><Link style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} to="about" > ABOUT </Link></li>
           </ul>
 
           <div className="connection-buttons">
-            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >{this.props.connectOne}</div>
+            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >Log In</div>
             <div>|</div>
-            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >{this.props.connectTwo}</div>
+            <div style={textDecoration} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >Log Out</div>
           </div>
 
           <div onClick={this.toggleMenu}>

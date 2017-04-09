@@ -12,7 +12,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Header connectOne="Log In" connectTwo="Sign In"/>
+        <Header />
         <Jumbotron/>
         <Cards/>
       </div>

@@ -2,6 +2,9 @@ import React from 'react';
 import './css/form.css';
 import axios from 'axios';
 
+//Component
+import Header from './Header';
+
 class Create extends React.Component {
   constructor(props) {
     super(props);
@@ -46,39 +49,54 @@ class Create extends React.Component {
 
 
   render() {
+    const heightWhiteBloc = {
+      height:"70%"
+    }
+
     return (
       <div>
+        <Header/>
+      <div className="container-form">
 
-          <label>Title</label>
+        <div style={heightWhiteBloc} className="white-bloc">
+          <label>Title
             <input
+              className="inputUrl"
               name="title"
               type="text"
               id="inputName"
               onChange={this.changeTitle}
               value={this.state.title}
                />
+          </label>
 
-           <label>Url de l'image</label>
+           <label>Url de l'image
              <input
+               className="inputImg"
                name="img"
                type="text"
                id="inputUrl"
                onChange={this.changeImg}
                value={this.state.img}
                 />
+            </label>
 
-            <label>Texte descriptif</label>
-              <input
+            <label>Texte descriptif
+              <textarea
+                className="textarea"
                 name="description"
                 type="text"
                 id="inputDescription"
                 onChange={this.changeDescription}
                 value={this.state.description}
                  />
+            </label>
 
-               <input type="button" onClick={this.sendForm} value="send"/>
+               <input className="button-send" type="button" onClick={this.sendForm} value="send"/>
 
+            </div>
 
+      </div>
       </div>
     );
   }
